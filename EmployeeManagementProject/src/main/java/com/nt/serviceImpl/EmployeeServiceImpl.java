@@ -3,6 +3,7 @@ package com.nt.serviceImpl;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import com.nt.entity.Employee;
@@ -10,6 +11,7 @@ import com.nt.repository.EmployeeRepo;
 import com.nt.service.EmployeeService;
 
 @Service
+@Profile({"dev", "qa"})
 public class EmployeeServiceImpl implements EmployeeService {
 	
 	@Autowired
