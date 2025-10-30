@@ -21,7 +21,7 @@ public class EmployeeController {
 	private EmployeeService empService;
 	
 	@PostMapping("/empsave")
-	public String postMethodName(@RequestBody Employee emp) {
+	public String createEmployee(@RequestBody Employee emp) {
 	String msg = empService.saveEmployee(emp);
 		if(msg == null || msg.isEmpty())
 			return "Failed.....!";
